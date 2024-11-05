@@ -1,0 +1,253 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    background-image: url(https://img.freepik.com/premium-photo/work-desk-with-city-views-background-illustrationbeautiful-lof-animei-background_77895-3056.jpg);
+    background-size: cover; /* Ensures the image covers the full area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    position: relative;
+}
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px; /* Set a maximum width for the grid */
+    margin: 0 auto;
+    position: relative;
+}
+
+.grid-item {
+    position: relative; /* Positioning for overlapping effect */
+    overflow: hidden;
+    margin: 10px; /* Margin between grid items */
+    border: 4px solid #ffa500; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth transform on hover */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.image-item {
+    flex: 1 1 40%; /* Adjust width for images */
+    min-width: 250px; /* Minimum width for images */
+}
+
+.text-item {
+    flex: 1 1 30%; /* Adjust width for text */
+    min-width: 200px; /* Minimum width for text */
+    background-color: rgba(255, 255, 255, 0.491); /* White background for text items */
+    padding: 20px; /* Padding inside text items */
+    color: #333; /* Text color */
+}
+
+/* Image styling */
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Same border radius for images */
+}
+
+/* Overlapping corners effect */
+.grid-item:first-child {
+    margin-top: -30px; /* Overlap effect on the first image */
+}
+
+.grid-item:last-child {
+    margin-bottom: -30px; /* Overlap effect on the last image */
+}
+
+
+/* Container and Background */
+.skills {
+    position: relative;
+    background-color: #282c34;
+    padding: 20px 10px;
+    background-image: url('/static/images/img_bg.jpg');
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Dark overlay effect */
+.skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to control darkness */
+    z-index: 1;
+}
+
+.skills h2,
+.skill-item {
+    position: relative;
+    z-index: 2; /* Ensures content appears above the overlay */
+}
+
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+/* Skill Item Styles */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px; /* Reduced padding for compact look */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 110px; /* Adjusted for compactness */
+    width: 110px;  /* Adjusted for compactness */
+    margin: 0 auto;
+}
+
+.skill-item i {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.skill-item h3 {
+    font-size: 0.9em; /* Slightly smaller text for compact layout */
+    color: #ffffff;
+    margin: 0;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Layout Adjustments */
+.skills .row {
+    row-gap: 10px; /* Reduced vertical gap for compact layout */
+}
+
+@media (min-width: 576px) {
+    .skills .col-sm-6 {
+        padding: 5px; /* Narrower padding for compact layout */
+    }
+}
+
+@media (min-width: 768px) {
+    .skills .col-md-3 {
+        padding: 5px; /* Narrower padding for compact layout */
+    }
+}
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.skill-item {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Initial position */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skill-item.visible {
+    opacity: 1;
+    animation: bounceIn 1s ease;
+}
+
+
+
+<section class="bento-grid py-5">
+        <div class="container">
+            <h2 class="text-center mb-5"><b>MY PROJECTS</b></h2>
+            <div class="row">
+                <!-- Project Item -->
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/pro1.png" alt="Project 1" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Deep learing Project</h3>
+                            <p>Lumphy skin Disease Detection</p>
+                            <a href="https://github.com/Dhanyatha-s/Deep-Learning-Project" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other projects -->
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/pro2.png" alt="Project 2" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Project Management Tool</h3>
+                            <p>Sass Project.</p>
+                            <a href="https://www.behance.net/gallery/207824763/Saas-Financial-Dashboard" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/pro3.jpeg" alt="Project 3" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Retail Management</h3>
+                            <p>Flask Application for organizing products</p>
+                            <a href="https://github.com/Dhanyatha-s/Retail-management-" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/3pro.png" alt="Project 4" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Nasdaq Financial Dashboard</h3>
+                            <p>Financial dashboard of stocks dividend.</p>
+                            <a href="https://www.behance.net/gallery/209156701/Stock-market-Dashboard" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/pro5.png" alt="Project 5" class="img-fluid" >
+                        <div class="project-info">
+                            <h3>Think 41 Website </h3>
+                            <p>UI design of website hero section</p>
+                            <a href="https://www.behance.net/gallery/206521117/THINK-41-Website-design" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/4pro.jpeg" alt="Project 6" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Sales and Customer Behavior Analysis </h3>
+                            <p>Sales data and customer interactions to gain insights.</p>
+                            <a href="https://github.com/Dhanyatha-s/Sales-and-Customer-Behavior-Analysis" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 

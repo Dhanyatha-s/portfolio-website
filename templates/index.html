@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top " aria-label="Second navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Dhanyatha</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('resume') }}">
+                    Download Resume
+                </a>
+            </li>
+              
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+ <!-- Hero Section -->
+    <div class="hero-section">
+
+        <div class="image-frame">
+            <img src="static/images/img_bg.jpg" alt="Background Image" />
+        </div>
+    
+        <div class="designer-info">
+            <h1 class="name">DHANYATHA S</h1>
+            <p class="catchy-line">Creative Designer & Developer</p>
+        </div>
+        <div class="design-text">DESIGNS & <br> BUILDS <br> <code>def is_Coder(): <br> &nbsp;&nbsp;return True </code></div>
+    </div>
+    
+
+    <!-- About Section -->
+    <section class="about">
+        <h2><b>ABOUT ME</b></h2>
+        <div class="about-container">
+            <div class="image-frame">
+                <img src="static/images/profile_bg.jpg" alt="Background Image" />
+            </div>
+            <div class="about-me">
+                <p><b style="font-family:cursive;">Hello!</b> <br> I'm Dhanyatha S, a passionate designer and developer committed to creating visually stunning and user-friendly experiences. With a strong blend of design and coding skills, I bring ideas to life, ensuring each project is both beautiful and functional. I thrive on collaboration and continuously embrace new technologies to stay ahead in this dynamic field.
+    
+                    My journey in design and development has taught me the importance of empathy and user-centric design, allowing me to create solutions that truly resonate with users. I’m excited to share my work and connect with like-minded individuals who share a passion for innovation and creativity. Let’s connect and create something amazing together!</p>
+            </div>
+
+            
+        </div>
+    </section>
+
+
+<section class="skills-section">
+    <!-- Left Column -->
+    <div class="left-column">
+        <div class="image-container">
+            <img src="/static/images/img_bg.jpg" alt="Profile Image" height="900px">
+        </div>
+        <div class="overlay-text">Skills</div>
+        <div class="overlay-text-2">Innovate, Create, Elevate</div>
+
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <!-- Skill Card 1 -->
+        <div class="card" style="background-color: #8D8D8D;">
+            <h3>Python for Web Development</h3>
+            <p>Experienced in creating dynamic web applications using Flask framework, focusing on seamless user experiences and efficient backend functionality along with AWS Cloud Development.</p>
+        </div>
+        
+        <!-- Skill Card 2 -->
+        <div class="card" style="background-color: #8D8D8D;">
+            <h3>UX Designer</h3>
+            <p>Skilled in designing and prototyping stunning user interfaces with Figma and Framer, delivering an intuitive and visually engaging user experience.</p>
+        </div>
+
+        <!-- Skill Card 3 -->
+        <div class="card" style="background-color: #8D8D8D;">
+            <h3>Machine Learning and Data Analysis</h3>
+            <p>Proficient in Python libraries like Pandas, Scikit-Learn and PowerBI, adept at analyzing data, building predictive models, and delivering insights for data-driven decisions.</p>
+        </div>
+    </div>
+</section>
+    <!-- Projects Section -->
+    
+    <section class="bento-grid py-5" style="padding-bottom: 10px; margin-bottom:0;">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: white;"><b>MY PROJECTS</b></h2>
+            <div class="row">
+                <!-- Project Item -->
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/pro1.png" alt="Project 1" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Deep Learning Project</h3>
+                            <p>Lumphy Skin Disease Detection</p>
+                            <a href="https://github.com/Dhanyatha-s/Deep-Learning-Project" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other projects -->
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/pro2.png" alt="Project 2" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Project Management Tool</h3>
+                            <p>SaaS Project.</p>
+                            <a href="https://www.behance.net/gallery/207824763/Saas-Financial-Dashboard" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/pro3.jpeg" alt="Project 3" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Retail Management</h3>
+                            <p>Flask Application for organizing products</p>
+                            <a href="https://github.com/Dhanyatha-s/Retail-management-" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/3pro.png" alt="Project 4" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Nasdaq Financial Dashboard</h3>
+                            <p>Financial dashboard of stocks dividend.</p>
+                            <a href="https://www.behance.net/gallery/209156701/Stock-market-Dashboard" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/pro5.png" alt="Project 5" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Think 41 Website</h3>
+                            <p>UI design of website hero section</p>
+                            <a href="https://www.behance.net/gallery/206521117/THINK-41-Website-design" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-item">
+                        <img src="/static/images/4pro.jpeg" alt="Project 6" class="img-fluid">
+                        <div class="project-info">
+                            <h3>Sales and Customer Behavior Analysis</h3>
+                            <p>Sales data and customer interactions to gain insights.</p>
+                            <a href="https://github.com/Dhanyatha-s/Sales-and-Customer-Behavior-Analysis" class="view-project"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+   <!-- Compact Contact Section -->
+   <section class="compact-contact-section py-5" style="padding-top: 10px; margin-top:0;">
+    <div class="container d-flex justify-content-between">
+        <div class="form-container text-center">
+            <h2 style="color: white;"><b>Get in Touch</b></h2>
+            <p style="color: white;"> Let's connect and collaborate to achieve our goals together! Whether you have a project in mind, need assistance, or simply want to share ideas, I'm here to help. Your thoughts and feedback are invaluable, and I look forward to the opportunity to work with you and create something amazing.
+            </p>
+            <form class="contact-form" id="contactForm">
+                <div class="input-group">
+                    <textarea style="background-color: transparent;border:none;color:white; border-bottom:4px solid white" id="message" placeholder="Your Message" required></textarea>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn">Send <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</section>
+
+
+
+<!-- footer -->
+<footer>
+    <div class="footer-content" style="padding-bottom: 10px;">
+        <div class="wrapper">
+            <a href="https://www.linkedin.com/in/dhanyatha-s" class="icon linkedin">
+                <div class="tooltip">LinkedIn</div>
+                <span><i class="fab fa-linkedin"></i></span>
+            </a>
+            <a href="https://www.instagram.com/uicrafted/" class="icon instagram">
+                <div class="tooltip">Instagram</div>
+                <span><i class="fab fa-instagram"></i></span>
+            </a>
+            <a href="https://github.com/Dhanyatha-s" class="icon github">
+                <div class="tooltip">Github</div>
+                <span><i class="fab fa-github"></i></span>
+            </a>
+            <a href="https://www.behance.net/dhanyatha_UX" class="icon behance">
+                <div class="tooltip">Behance</div>
+                <span><i class="fab fa-behance"></i></span>
+            </a>
+        </div>
+
+        <div class="footer-text">
+            <p>&copy; 2024 Dhanyatha S. All Rights Reserved.</p>
+            <p style="text-align: center;"><a href="mailto:dhanyatha237.y@gmail.com">dhanyatha237.y@gmail.com</a></p>
+        </div>
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="/static/css/script.js"></script>
+</body>
+</html>
+

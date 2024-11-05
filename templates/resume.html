@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="pdf-container">
+        <h1>My Resume</h1>
+        <!-- Make sure the path to the PDF is correct -->
+        <iframe src="{{ url_for('static', filename='resume.pdf') }}" class="pdf-viewer"></iframe>
+        <!-- Download button linking directly to the PDF -->
+        <a href="{{ url_for('static', filename='resume.pdf') }}" class="download-btn" download>Download Resume</a>
+    </div>
+</body>
+</html>
